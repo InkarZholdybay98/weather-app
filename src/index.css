@@ -1,13 +1,148 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 90dvh;
+  background-color: #e8e8e8;
+}
+
+.containerWeather {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.container {
+  /* width: 50%; */
+  background-color: #1c9bbe;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.searchInputDiv input {
+  margin-right: 20px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  padding: 15px;
+  font-size: 17px;
+}
+
+.searchInputDiv button {
+  outline: none;
+  border: none;
+  padding: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: lightblue;
+  transition: 0.1s ease-in;
+}
+
+.searchInputDiv button:hover {
+  background-color: rgb(132, 185, 202);
+}
+
+.weatherIcon {
+  display: flex;
+  justify-content: center;
+}
+
+.weatherIcon img {
+  width: 100%;
+}
+
+.tempCity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tempCity h1 {
+  font-size: 4rem;
+}
+
+.tempCity h3 {
+  font-size: 2rem;
+}
+
+.humidWind {
+  display: flex;
+  justify-content: space-between;
+}
+
+.humidWind {
+  margin-top: 50px;
+}
+
+.humidity,
+.wind {
+  display: flex;
+  gap: 10px;
+}
+
+.imgHumidity,
+.imgWind {
+  display: flex;
+  align-items: center;
+}
+
+.humidity img,
+.wind img {
+  width: 20px;
+  height: 20px;
+}
+
+.humidText h4,
+.windText h4 {
+  font-size: 1.5rem;
+}
+
+.bi-search {
+  font-size: 18px;
+}
+
+@media (max-width: 419px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 363px) {
+  .weatherIcon img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 351px) {
+  .searchInputDiv {
+    display: flex;
+  }
+}
+
+@media (max-width: 335px) {
+  .container {
+    width: 90%;
+  }
+
+  .searchInputDiv input {
+    width: 90%;
+  }
+}
+
+@media (max-width: 293px) {
+  .searchInputDiv input {
+    width: 100%;
+  }
+
+  .searchInputDiv input {
+    margin-right: 9px;
+  }
+
+  .searchInputDiv button {
+    background-color: transparent;
+    padding: 0;
+  }
 }
